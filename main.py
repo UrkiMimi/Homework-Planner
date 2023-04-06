@@ -12,10 +12,14 @@ def main_1():
         main_1()
 
 def add_list():
-    input=input('what do you want to add')
-    return input
+    inp=input('What do you want to? ')
+    return inp
+
 #init part 2 electric boogalo
-inp = main_1()
-if inp == '1':
-    #Run Add to List
-    print('h')
+while True:
+    inp = main_1()
+    if inp == '1':
+        list.append(add_list())
+    if inp == '2':
+        print('Current Homework Planner')
+        print('\n'.join(map(str, list)))
