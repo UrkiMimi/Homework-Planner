@@ -16,6 +16,11 @@ def add_list():
     inp2=input('What time is it due?')
     return str(inp) + " " + str(inp2)
 
+def del_list():
+    inp=int(input('Enter the number of what item you want to delete'))
+    x=inp-1
+    list.pop(x)
+
 #init part 2 electric boogalo
 while True:
     inp = main_1()
@@ -25,5 +30,7 @@ while True:
         print('Current Homework Planner')
         print('\n'.join(map(str, list)))
         input('')
+    elif inp == '3':
+        del_list()
     elif inp == '4':
         break
