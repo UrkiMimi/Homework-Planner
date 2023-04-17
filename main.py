@@ -14,7 +14,7 @@ def main_1():
 def add_list():
     inp=input('What do you want to add? ')
     inp2=input('What time is it due?')
-    return str(inp) + " " + str(inp2)
+    return str(len(list)+1) + '. ' + str(inp) + " " + str(inp2)
 
 def del_list():
     inp=int(input('Enter the number of what item you want to delete'))
