@@ -8,7 +8,6 @@ def printOutList():
         print('Current Homework Planner')
         for i in range(len(list)):
             print(str(i + 1)+ ". " + list[i])
-        input('')
 
 def main_1():
     print('**Homework Planner** \n 1. Add to homework planner\n 2. View homework planner\n 3. Delete item from homework planner\n 4. Sort List\n 5. Exit')
@@ -25,10 +24,9 @@ def add_list():
     return str(inp) + " " + str(inp2)
 
 def del_list():
-    inp=int(input('Enter the number of what item you want to delete'))
+    inp=int(input('\nEnter the number of what item you want to delete'))
     x=inp-1
-    list.pop(x)
-    origlist.pop(x)
+    del list[x]
 
 def sort(list, origlist):
     print('How would you like to sort the list?')
@@ -47,8 +45,9 @@ while True:
         origlist = list
     elif inp == '2':
         printOutList()
-        origlist = list
+        input('')
     elif inp == '3':
+        printOutList()
         del_list()
         origlist = list
     elif inp == '4':
